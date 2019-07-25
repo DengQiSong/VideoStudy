@@ -9,6 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dqs.videostudy.app.BaseActivity;
+import com.dqs.videostudy.module.Camera2RecordingActivity;
 import com.dqs.videostudy.module.RecordingActivity;
 import com.yanzhenjie.permission.AndPermission;
 
@@ -35,6 +36,11 @@ public class MainActivity extends BaseActivity {
 
     public void startVideo(View view) {//开始录像
         Intent intent = new Intent(this, RecordingActivity.class);
+        startActivityForResult(intent, 1);
+    }
+
+    public void startVideos(View view) {//开始录像
+        Intent intent = new Intent(this, Camera2RecordingActivity.class);
         startActivityForResult(intent, 1);
     }
 

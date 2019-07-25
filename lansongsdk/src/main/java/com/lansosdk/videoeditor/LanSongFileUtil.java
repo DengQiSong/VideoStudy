@@ -35,8 +35,7 @@ public class LanSongFileUtil {
     private static final Object mLock = new Object();
 
     //可以修改这个路径;
-
-    private static final String DEFAULT_DIR= Environment.getExternalStorageDirectory().getPath()+"/lansongBox/";
+    private static final String DEFAULT_DIR= Environment.getExternalStorageDirectory().getPath()+"/dqsBox/";
     protected static  String FileCacheDir =DEFAULT_DIR;
     protected static String mTmpFileSubFix="";  //后缀,
     protected static String mTmpFilePreFix="";  //前缀;

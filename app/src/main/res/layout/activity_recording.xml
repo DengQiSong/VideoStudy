@@ -14,7 +14,7 @@
             android:layout_gravity="center" />
     </FrameLayout>
 
-    <com.dqs.videodemo.widget.LineProgressView
+    <com.dqs.videostudy.widget.LineProgressView
         android:id="@+id/lineProgressView"
         android:layout_width="match_parent"
         android:layout_height="3dp"
@@ -53,7 +53,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="70dp">
 
-        <com.dqs.videodemo.widget.RecordView
+        <com.dqs.videostudy.widget.RecordView
             android:id="@+id/recordView"
             android:layout_width="150dp"
             android:layout_height="150dp"

@@ -12,8 +12,13 @@
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="开始录像" />
-
+        android:text="录像方法1" />
+    <Button
+        android:onClick="startVideos"
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="录像方法2" />
     <TextView
         android:id="@+id/tv_videoAddress"
         android:layout_width="match_parent"
