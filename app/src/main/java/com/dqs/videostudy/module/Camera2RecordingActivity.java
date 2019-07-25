@@ -95,8 +95,8 @@ public class Camera2RecordingActivity extends AppCompatActivity implements Textu
     private boolean isLightOn = false;//当前闪光灯是否开启
 
     //录像
-    private static final int MAX_RECORD_TIME = appConfig.RECORD_MAX_TIME;//最大录制时长,默认10S
-    private static final int MIN_RECORD_TIME = appConfig.RECORD_MIN_TIME;//最小录制时长，默认2S
+    private static final float MAX_RECORD_TIME = appConfig.RECORD_MAX_TIME;//最大录制时长,默认10S
+    private static final float MIN_RECORD_TIME = appConfig.RECORD_MIN_TIME;//最小录制时长，默认2S
     private boolean isRecording = false;//是否正在录制视频
     private boolean isStop = false;//是否停止过了MediaRecorder
     private int currentTime;
@@ -212,7 +212,7 @@ public class Camera2RecordingActivity extends AppCompatActivity implements Textu
         //当SurefaceTexture可用的时候，设置相机参数并打开相机
         this.width = width;
         this.height = height;
-
+        mProgressView.setMinProgress(MIN_RECORD_TIME/MAX_RECORD_TIME);
         setupCamera(width, height);//配置相机参数
         openCamera(mCameraId);//打开相机
     }
@@ -529,6 +529,8 @@ public class Camera2RecordingActivity extends AppCompatActivity implements Textu
             //显示时间
             tvBalanceTime.setVisibility(View.VISIBLE);
             tvBalanceTime.setText(MAX_RECORD_TIME - currentTime + "s");
+            float cit=currentTime/MAX_RECORD_TIME;
+            mProgressView.setProgress(cit);
 
             //如果超过最大录制时长则自动结束
             if (currentTime > MAX_RECORD_TIME) {
